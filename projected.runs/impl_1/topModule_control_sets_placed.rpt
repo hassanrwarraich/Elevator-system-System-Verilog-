@@ -1,0 +1,110 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Dec 23 21:55:12 2018
+| Host         : DESKTOP-CEKIGQ7 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file topModule_control_sets_placed.rpt
+| Design       : topModule
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    42 |
+| Unused register locations in slices containing registers |    86 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      8 |            9 |
+|     10 |            1 |
+|     12 |            2 |
+|    16+ |           29 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             130 |           24 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             116 |           17 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1828 |          274 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------------------+--------------------------------------+------------------+----------------+
+|  Clock Signal  |               Enable Signal               |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++----------------+-------------------------------------------+--------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | sys_reset_IBUF                            | execute_IBUF                         |                1 |              2 |
+|  clk_IBUF_BUFG | pos[1]_i_2_n_0                            | pos                                  |                4 |              8 |
+|  clk_IBUF_BUFG | trips[3]_i_1_n_0                          |                                      |                1 |              8 |
+|  clk_IBUF_BUFG | keypad4X4_inst0/FSM_onehot_row[4]_i_1_n_0 |                                      |                1 |              8 |
+|  clk_IBUF_BUFG | floor1[3]_i_2_n_0                         | floor1[3]_i_1_n_0                    |                3 |              8 |
+|  clk_IBUF_BUFG | floor3[3]_i_2_n_0                         | floor3[3]_i_1_n_0                    |                1 |              8 |
+|  clk_IBUF_BUFG | floor2[3]_i_2_n_0                         | floor2[3]_i_1_n_0                    |                3 |              8 |
+|  clk_IBUF_BUFG | in0[3]_i_1_n_0                            |                                      |                2 |              8 |
+|  clk_IBUF_BUFG | in1[3]_i_1_n_0                            |                                      |                1 |              8 |
+|  clk_IBUF_BUFG | in2[3]_i_1_n_0                            |                                      |                1 |              8 |
+|  clk_IBUF_BUFG | display_8x8_0/bit_sent_count[4]_i_1_n_0   |                                      |                1 |             10 |
+|  clk_IBUF_BUFG | execute_IBUF                              | store                                |                3 |             12 |
+|  clk_IBUF_BUFG | keypad4X4_inst0/count_deb                 | keypad4X4_inst0/count_deb[5]_i_1_n_0 |                2 |             12 |
+|  clk_IBUF_BUFG | keypad4X4_inst0/clk_en2                   |                                      |                4 |             18 |
+|  clk_IBUF_BUFG | display_8x8_0/clk_en_slow                 | display_8x8_0/op_count[9]_i_1_n_0    |                5 |             20 |
+|  clk_IBUF_BUFG | display_8x8_0/color_data[0]_i_1_n_0       |                                      |                6 |             48 |
+|  clk_IBUF_BUFG | count4[34]_i_1_n_0                        | people                               |               14 |             70 |
+|  clk_IBUF_BUFG | count21[34]_i_1_n_0                       | people                               |               10 |             70 |
+|  clk_IBUF_BUFG | count22[34]_i_1_n_0                       | people                               |               11 |             70 |
+|  clk_IBUF_BUFG | count2[34]_i_1_n_0                        | people                               |                7 |             70 |
+|  clk_IBUF_BUFG | count3[34]_i_1_n_0                        | people                               |               14 |             70 |
+|  clk_IBUF_BUFG | count5[34]_i_1_n_0                        | people                               |                9 |             70 |
+|  clk_IBUF_BUFG | count6[34]_i_1_n_0                        | people                               |                7 |             70 |
+|  clk_IBUF_BUFG | count7[34]_i_1_n_0                        | people                               |               14 |             70 |
+|  clk_IBUF_BUFG | count8[34]_i_1_n_0                        | people                               |               13 |             70 |
+|  clk_IBUF_BUFG | ctr2[34]_i_2_n_0                          | ctr2[34]_i_1_n_0                     |               10 |             70 |
+|  clk_IBUF_BUFG | count10[34]_i_1_n_0                       | people                               |                7 |             70 |
+|  clk_IBUF_BUFG | count11[34]_i_1_n_0                       | people                               |                7 |             70 |
+|  clk_IBUF_BUFG | count12[34]_i_1_n_0                       | people                               |                5 |             70 |
+|  clk_IBUF_BUFG | count13[34]_i_1_n_0                       | people                               |               14 |             70 |
+|  clk_IBUF_BUFG | count14[34]_i_1_n_0                       | people                               |               13 |             70 |
+|  clk_IBUF_BUFG | count15[34]_i_1_n_0                       | people                               |               12 |             70 |
+|  clk_IBUF_BUFG | ctr1[34]_i_2_n_0                          | ctr1[34]_i_1_n_0                     |                9 |             70 |
+|  clk_IBUF_BUFG | count17[34]_i_1_n_0                       | people                               |                7 |             70 |
+|  clk_IBUF_BUFG | count18[34]_i_1_n_0                       | people                               |                7 |             70 |
+|  clk_IBUF_BUFG | count19[34]_i_1_n_0                       | people                               |                8 |             70 |
+|  clk_IBUF_BUFG | count20[34]_i_1_n_0                       | people                               |                7 |             70 |
+|  clk_IBUF_BUFG | count[34]_i_1_n_0                         | people                               |                8 |             70 |
+|  clk_IBUF_BUFG | counter[34]_i_2_n_0                       | people                               |               14 |             70 |
+|  clk_IBUF_BUFG | counter2[34]_i_1_n_0                      | people                               |               14 |             70 |
+|  clk_IBUF_BUFG | count16[34]_i_1_n_0                       | people                               |               11 |             70 |
+|  clk_IBUF_BUFG |                                           |                                      |               24 |            130 |
++----------------+-------------------------------------------+--------------------------------------+------------------+----------------+
+
+
